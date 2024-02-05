@@ -1,0 +1,83 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Explorador de Lugares</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand" href="#">Explorador de Lugares</a>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="box-principal container mt-4">
+        <!-- Barra de búsqueda -->
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <form class="form-inline">
+                    <div class="form-group mx-sm-3 mb-2">
+                        <label for="inputLocation" class="sr-only">Ubicación</label>
+                        <input type="text" class="form-control" id="inputLocation" placeholder="Ingrese una ubicación">
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">Buscar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Filtros Principales -->
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <h5>Filtros Principales</h5>
+                <!-- Agrega más filtros principales según tu necesidad -->
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="filterRestaurant">
+                    <label class="form-check-label" for="filterRestaurant">Restaurantes</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="filterPark">
+                    <label class="form-check-label" for="filterPark">Parques</label>
+                </div>
+            </div>
+
+            <!-- Filtros Específicos -->
+            <div class="col-md-9">
+                <h5>Filtros Específicos</h5>
+                <!-- Filtros específicos para Restaurantes -->
+                <div id="restaurantFilters" class="specific-filters">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="filterVegan">
+                        <label class="form-check-label" for="filterVegan">Comida Vegana</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="filterPetAllowed">
+                        <label class="form-check-label" for="filterPetAllowed">Permite Mascotas</label>
+                    </div>
+                </div>
+
+                <!-- Filtros específicos para Parques -->
+                <div id="parkFilters" class="specific-filters">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="filterPlayground">
+                        <label class="form-check-label" for="filterPlayground">Área de Juegos</label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
