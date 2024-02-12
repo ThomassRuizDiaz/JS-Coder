@@ -4,10 +4,9 @@ function GeneradorPassword(Contrasenias) {
     let fecha = document.getElementById("Aniopass").value
     let caracterEspecial = document.getElementById("Caracterpass").value
     let nFavorito = document.getElementById("Numeropass").value
-    let contadorCiclos = ValidarElementos(nombre, fecha, caracterEspecial, nFavorito, Contrasenias);
-
-    return contadorCiclos;
+    ValidarElementos(nombre, fecha, caracterEspecial, nFavorito, Contrasenias);
 }
+
 
 function ValidarElementos(nombre, fecha, caracter, numero, Contrasenias) {
     let DivNombre = document.getElementById("ValidNombre");
@@ -35,20 +34,32 @@ function ValidarElementos(nombre, fecha, caracter, numero, Contrasenias) {
         DivFecha.className = "text-danger";
         return false;
     }
-    console.log(nombre, fecha, caracter, numero)
+    // console.log(nombre, fecha, caracter, numero)
+    
 
+    Contrasenias[contadorPasswords]=new Password(nombre, fecha, caracter, numero);
+    console.log(Contrasenias)
+    //console.log("cantidad de passwords " +Contrasenias.length)
+    //console.log("nombre de la primera pass " +Contrasenias[0].nombre)
     constructorPassword(nombre, fecha, caracter, numero, Contrasenias);
-    return Contrasenias.length; // Devuelve la longitud del array después de agregar la contraseña
+    // return Contrasenias.length;
+    contadorPasswords= contadorPasswords+1;
+    return contadorPasswords;
 }
 
 function constructorPassword(nombre, fecha, caracter, numero, Contrasenias){
-    password = nombre + fecha + caracter + numero;
-    Contrasenias.push(password);
 
+    for(let i = 0; i < Contrasenias.length; i++){
+        if (Contrasenias[i].nombre) {
+            Contrasenias[i] = Contrasenias[i].nombre + Contrasenias[i].fecha + Contrasenias[i].caracter + Contrasenias[i].numero;
+            console.log("La contraseña " + i + " es: " + Contrasenias[i]);
+        } else {
+            continue;
+        }
+    }
     let DivPassword = document.getElementById("generadorPassword");
     // DivPassword.innerHTML = "Tu contraseña Nro " + contadorCiclos + " es " + password;
     // DivPassword.className = "text-danger";
-    
     DivPassword.innerHTML = "Se genero tu contraseña correctamente!";
     DivPassword.className = "text-success";
     generarBotonContraseñas(Contrasenias);
@@ -80,6 +91,7 @@ function generarBotonContraseñas(Contrasenias) {
 
 
 var Contrasenias = [];
+contadorPasswords = 0;
 document.getElementById("boton").addEventListener("click", function () {
     GeneradorPassword(Contrasenias);
     
@@ -105,4 +117,14 @@ function mostrarPasswords(Contrasenias){
         contadorAlertas= contadorAlertas+1;
         console.log(password)
     }
+}
+
+
+
+
+function Password(nombre, fecha, caracter, numero){
+    this.nombre = nombre;
+    this.fecha = fecha;
+    this.caracter = caracter;
+    this.numero = numero;
 }
