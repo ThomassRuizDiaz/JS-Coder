@@ -60,7 +60,7 @@ function SegundaParteBusqueda(ValoraBuscar,RangoUbicacion,Ubicacion) {
         }
         TerceraParteBusqueda(ValoraBuscar,RangoUbicacion,Ubicacion,Categoria);
     }).catch(function(error) {
-        console.error('Error al obtener la categoria de búsqueda:', error);
+        console.error('Error al obtener la categoria de busqueda:', error);
     });
 }
 function TerceraParteBusqueda(ValoraBuscar,RangoUbicacion,Ubicacion,Categoria){
@@ -76,7 +76,7 @@ function TerceraParteBusqueda(ValoraBuscar,RangoUbicacion,Ubicacion,Categoria){
 
 function verificarValores(ValoraBuscar,RangoUbicacion, Ubicacion, RangoPrecio, Categoria) {
     if (((RangoUbicacion || Ubicacion) && RangoPrecio) || (Categoria === "VACIO" && (RangoUbicacion || Ubicacion) && RangoPrecio)) {
-        console.log("Todos los valores necesarios están disponibles o Categoria está vacío.");
+        console.log("Todos los valores necesarios estan disponibles o Categoria esta vacio.");
         GoogleMapsAPI(ValoraBuscar, RangoUbicacion, RangoPrecio, Categoria, Ubicacion);
 
     } else {
