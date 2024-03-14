@@ -1,0 +1,111 @@
+* {
+    color: antiquewhite;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(../assets/background-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.site-navbar {
+    width: 100%;
+}
+
+.color-logo {
+    color: #D1B000;
+    text-decoration: none !important;
+}
+
+.site-navbar .site-logo a,
+.site-navbar .site-navigation .site-menu>li>a {
+    text-decoration: none;
+}
+
+.site-navbar .site-logo a:hover {
+    color: #D1B000;
+}
+
+.site-navbar .site-logo a:hover span {
+    background: #D1B000;
+}
+
+.site-navbar .site-logo {
+    position: relative;
+    font-size: 24px !important;
+}
+
+.site-navbar .site-navigation .site-menu a {
+    text-decoration: none !important;
+    display: inline-block;
+}
+
+.site-navbar .site-navigation .site-menu>li {
+    display: inline-block;
+}
+
+.site-navbar .site-navigation .site-menu>li>a {
+    padding: 10px 0px;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none !important;
+
+}
+
+.site-navbar .site-navigation .site-menu>li>a>span {
+    padding: 5px 20px;
+    border-radius: 30px;
+}
+
+.site-navbar .site-navigation .site-menu>li>a:hover>span {
+    background: #D1B000;
+    color: #fff;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+
+.lugar-info {
+    width: 50%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.nombre {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.fotos {
+    /* Estilos para las fotos, por ejemplo: */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fotos img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.direccion, .horarios, .precio {
+    margin-top: 10px;
+}
+
+.mapsurl {
+    display: block;
+    margin-top: 10px;
+    color: blue;
+    text-decoration: underline;
+}
+
+
+
+.imagen-carousel{
+    object-fit: cover;
+    height: 400px; /* Establece la altura fija deseada */
+}
