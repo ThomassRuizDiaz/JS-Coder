@@ -22,7 +22,7 @@ async function GoogleMapsAPI(ValoraBuscar, RangoUbicacion, Categoria, RangoPreci
     console.log("La ubicacion es: " + Ubicacion);
 
     const headers = {
-        "Authorization": "Bearer ya29.a0Ad52N39d13IVOUe8YAoVE9tc5pPVsJg0snjAJ6ZnUZSGmM-79X3gys62wJK8B64vLSG41SdQAquAcHSIVGHb1n08BSTWnkv5WYmBwPr3ZJZkdtaKGwwkHIKkhuQGHB5uIjCf01_jpFen9bUXBtb8Luq14L5JUz6BBfRNMQaCgYKASgSARMSFQHGX2MitPv5PV3wvROlh5dS-DgcSg0173",
+        "Authorization": "Bearer ya29.a0Ad52N3885uj_SUDoYqzgsKL0dcu2Aa8Mvw0HAGN6YcvBejEX0Xi76w7G-PNOxOXl7SZKAVcVNHiGrGdEfrvFspbLj_s5HwUJi9SQowFhITI9SenxXUFiEh0YJaHpvLec4jDtq6lFpK0_dVuzPOAvC-S-qPW-5VQEY5aJaCgYKARQSARMSFQHGX2MiwQf0WhxTehO1XYPnMh5hSA0171",
         "X-Goog-User-Project": "places-412221"
     };
 
